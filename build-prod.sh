@@ -1,0 +1,1 @@
+npm run build:prod && cd dist && tar zcvf znws-prod.tar.gz * 

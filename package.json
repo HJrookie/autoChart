@@ -1,0 +1,36 @@
+{
+  "name": "antd-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite  --force",
+    "build:stage": "vite build --mode staging",
+    "build:prod": "vite build --mode production",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@antv/antv-spec": "^0.1.0-alpha.18",
+    "@antv/ava": "^3.4.1",
+    "@antv/ava-react": "^3.3.2",
+    "@antv/g2": "^5.2.7",
+    "@antv/smart-color": "^0.2.1",
+    "axios": "^1.7.7",
+    "classnames": "^2.5.1",
+    "exceljs": "^4.4.0",
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@antv/algorithm": "^0.1.25",
+    "@antv/color-schema": "^0.2.3",
+    "@antv/data-samples": "^1.0.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "prettier": "^2.4.1",
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,1 @@
+npm run build:stage && cd dist && tar zcvf znws-stage.tar.gz * 

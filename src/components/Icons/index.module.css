@@ -1,0 +1,33 @@
+.icon {
+  /* display: inline-block;
+  cursor: pointer; */
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    transition: all ease-in-out 0.3s;
+    padding: 5px;
+    fill: currentColor;
+    margin: 0px -8px;
+    color: rgb(105, 104, 105);
+    /* border: 1px solid rgb(105, 104, 105); */
+  }
+
+  /* &:not(:first-child) svg {
+    width: 3rem;
+    transition: all ease-in-out 0.3s;
+    height: 2rem;
+    color: rgb(105, 104, 105);
+    fill: currentColor;
+    border: 1px solid rgb(105, 104, 105);
+    border-left: none;
+  } */
+}
+
+.icon.active {
+  svg {
+    color: #226ed8b3;
+    /* border: 1px solid rgb(187, 152, 212); */
+  }
+}
+/* border-radius: 3px; */
