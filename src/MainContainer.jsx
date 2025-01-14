@@ -31,7 +31,7 @@ import { DynamicChart } from "./components/DynamicChart";
 const myChartAdvisor = new Advisor();
 
 export const MainContainer = (props) => {
-  const { arr, settings } = props;
+  const { arr = [], settings } = props;
   const isMob = document.body.clientWidth < 768;
   const [messageApi, contextHolder] = message.useMessage();
   const [firstInsight, setFirstInsight] = useState(null);

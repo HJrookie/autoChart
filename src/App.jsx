@@ -34,7 +34,7 @@ const myChartAdvisor = new Advisor();
 import { MainContainer } from "./MainContainer";
 
 function App() {
-  const [arr, setArr] = useState([]);
+  const [arr, setArr] = useState();
   const _lobj = getArgsFromLocation(window.location.search.slice(1));
   const [settings, setSettings] = useState({
     tryInsightFirst: false,
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <Row>
-      {settings.showInput ? <Input.TextArea onChange={onChange} defaultValue={JSON.stringify(arr)} autoSize={{ minRows: 6, maxRows: 12 }} placeholder="输入数组" /> : null}
+      {settings.showInput ? <Input.TextArea onChange={onChange} defaultValue={JSON.stringify(arr)} autoSize={{ minRows: 6, maxRows: 12 }} placeholder="请输入数组" /> : null}
 
       <Popover
         placement="leftBottom"
@@ -66,16 +66,16 @@ function App() {
               <Switch
                 checkedChildren={<CheckOutlined />}
                 unCheckedChildren={<CloseOutlined />}
-                onChange={(v) => setSettings({ tryInsightFirst: v })}
+                onChange={(v) => setSettings(prev => ({ ...prev, tryInsightFirst: v }))}
               />
             </div>
-            <div>
+            <div style={{ marginTop: 8 }}>
               <span>输入框:</span>
               <Switch
                 checkedChildren={<CheckOutlined />}
                 unCheckedChildren={<CloseOutlined />}
                 defaultChecked
-                onChange={(v) => setSettings({ showInput: v })}
+                onChange={(v) => setSettings(prev => ({ ...prev, showInput: v }))}
               />
             </div>
           </>
@@ -85,7 +85,7 @@ function App() {
         <FloatButton shape="circle" icon={<SettingOutlined />}></FloatButton>
       </Popover>
 
-      {arr.length ? <MainContainer arr={arr} settings={settings}></MainContainer> : null}
+      {arr?.length ? <MainContainer arr={arr} settings={settings}></MainContainer> : null}
     </Row>
   );
 }
